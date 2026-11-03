@@ -27,6 +27,8 @@ app.use(express.json());
 // API Routes
 app.use("/api/items", itemRoutes);
 app.use("/api/suppliers", supplierRoutes);
+app.use("/api/ai", aiRoutes);
+
 
 // Root Route
 app.get("/", (_req, res) => {
@@ -34,7 +36,6 @@ app.get("/", (_req, res) => {
 });
 
 
-app.use("/api/ai", aiRoutes);
 
 // Start Server
 async function startServer() {

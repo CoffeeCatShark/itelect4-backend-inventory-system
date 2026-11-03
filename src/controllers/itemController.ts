@@ -8,7 +8,6 @@ export const getItems = async (req: Request, res: Response) => {
     try {
         const { supplierID } = req.query;
 
-        // If supplierID is provided, filter by supplier
         const filter = supplierID
             ? { supplierID: supplierID as string }
             : {};
